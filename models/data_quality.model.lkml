@@ -13,26 +13,34 @@ persist_with: data_quality_default_datagroup
 # explore: dq_metadata {}
 #
 
-explore: bi_column_analysis {
-  label: "Column Analysis"
-}
+# explore: bi_column_analysis {
+#   label: "Column Analysis"
+# }
+#
+# explore: bi_comparison_analysis {
+#   label: "Comparison Analysis"
+# }
+#
+# explore: bi_overview_analysis {
+#   label: "Overview Analysis"
+# }
 
-explore: bi_comparison_analysis {
-  label: "Comparison Analysis"
-}
-
-explore: bi_overview_analysis {
-  label: "Overview Analysis"
-}
-
-
-explore: dq_metrics {
+explore: bi_dq_metrics {
   label: "Data Quality Metrics"
+  view_label: "Data Quality"
   join: max_run_date {
     relationship: one_to_one
     type: cross
   }
 }
+
+# explore: dq_metrics {
+#   label: "Data Quality Metrics2"
+#   join: max_run_date {
+#     relationship: one_to_one
+#     type: cross
+#   }
+# }
 
 # explore: max_run_date {}
 #

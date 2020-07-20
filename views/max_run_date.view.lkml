@@ -12,7 +12,7 @@ view: max_run_date {
   dimension_group: maxrun_time {
     type: time
     sql: ${TABLE}."MAX(RUN_TIME)" ;;
-    view_label: "Dq Metrics"
+    view_label: "Data Quality"
   }
 
 #   set: detail {
