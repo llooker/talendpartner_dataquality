@@ -88,16 +88,19 @@ view: bi_dq_metrics {
   measure: total_rows_processed {
     type: sum
     sql:  ${rows_processed} ;;
+    drill_fields: [detail*]
   }
 
   measure: total_rows_succeeded {
     type: sum
     sql: ${rows_succeeded} ;;
+    drill_fields: [detail*]
   }
 
   measure: total_rows_failed {
     type: sum
     sql: ${rows_failed} ;;
+    drill_fields: [detail*]
   }
 
   measure: dq_score {
@@ -105,11 +108,32 @@ view: bi_dq_metrics {
     type: number
     sql: ${total_rows_succeeded} / NULLIF(${total_rows_processed}, 0) * 100 ;;
     value_format_name: decimal_0
+    drill_fields: [detail*]
     #filters: [is_max_time: "Yes"]
   }
 
   measure: count {
     type: count
-    drill_fields: [report_name, rule_name, department_name, indicator_name]
+    drill_fields: [detail*]
   }
+
+  # ----- Sets of fields for drilling ------
+  set: detail {
+    fields: [
+      run_time,
+      report_name,
+      data_concept,
+      data_element,
+      department_name,
+      dq_dimension,
+      dq_score,
+      indicator_category,
+      indicator_name,
+      rows_processed,
+      rows_passed,
+      rows_failed,
+      rule_name
+    ]
+  }
+
 }

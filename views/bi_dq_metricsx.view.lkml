@@ -71,46 +71,46 @@ view: bi_dq_metricsx {
     sql: ${TABLE}."RUN_TIME" ;;
   }
 
-dimension: run_date_filter {
+  dimension: run_date_filter {
   type: string
   sql: ${run_time} ;;
-}
+  }
 
-dimension: is_max_time {
+  dimension: is_max_time {
   type: yesno
   sql: ${run_time} = ${max_run_date.maxrun_time_time} ;;
-}
-dimension: rows_succeeded {
+  }
+  dimension: rows_succeeded {
   type: number
   sql: ${rows_processed} - ${rows_failed} ;;
-}
+  }
 
-measure: total_rows_processed {
+  measure: total_rows_processed {
   type: sum
   sql:  ${rows_processed} ;;
-}
+  }
 
-measure: total_rows_succeeded {
+  measure: total_rows_succeeded {
   type: sum
   sql: ${rows_succeeded} ;;
-}
+  }
 
-measure: total_rows_failed {
+  measure: total_rows_failed {
   type: sum
   sql: ${rows_failed} ;;
-}
+  }
 
 
-measure: dq_score {
+  measure: dq_score {
   type: number
   sql: ${total_rows_succeeded} / NULLIF(${total_rows_processed}, 0) * 100 ;;
   value_format_name: decimal_0
   #filters: [is_max_time: "Yes"]
-}
+  }
 
 
-measure: count {
+  measure: count {
   type: count
   drill_fields: [indicator_name, rule_name, department_name]
-}
+  }
 }
