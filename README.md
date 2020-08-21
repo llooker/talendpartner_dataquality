@@ -30,7 +30,9 @@ When the Report is executed it populates the DQ Mart.
 
 The Talend DQ Mart physical model is documented here - <br>
 <a href="https://help.talend.com/reader/p~XkHQRil1oYMoldgyweMg/GiniPfbvkc_FnV~mWRaDbQ">https://help.talend.com/reader/p~XkHQRil1oYMoldgyweMg/GiniPfbvkc_FnV~mWRaDbQ</a><br><br>
-The following four additional database views are to be created manually in the DQ mart, to enable data exploration and dashboarding.<br><br>
+The following four additional database views are to be created manually in the DQ mart, to enable data exploration and dashboarding.  The DDL for these views can be found here:<br>
+<a href="https://github.com/llooker/talendpartner_dataquality/blob/master/DDL_For_Required_Database_Views.md">https://github.com/llooker/talendpartner_dataquality/blob/master/DDL_For_Required_Database_Views.md</a>
+<br><br>
 &nbsp; &nbsp; &nbsp; •  bi_dq_metrics.sql<br>
 &nbsp; &nbsp; &nbsp; •  bi_column_analysis.sql<br>
 &nbsp; &nbsp; &nbsp; •  bi_overview_analysis.sql<br>
