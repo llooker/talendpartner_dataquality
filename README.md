@@ -43,7 +43,7 @@ The following four additional database views are to be created manually in the D
 &nbsp; &nbsp; &nbsp; •  The block provides access to all tables within the datamart, allowing you to create any suitable dashboard.<br>
 &nbsp; &nbsp; &nbsp; •  The dashboard is built using just this view – bi_dq_metrics
 </p>
-<h2 style="padding-bottom:0px;color:#76678b;font-weight:500">How Too Implement This Block</h2>
+<h2 style="padding-bottom:0px;color:#76678b;font-weight:500">How To Implement This Block</h2>
 <p style="font-weight: 300">
 •  If you do not already have a connection created to your DQ Mart, create one.  Refer to the Looker documentation for instructions on creating a new connection.<br>
 •  Create the 4 database views spefied in the previous section.<br>
