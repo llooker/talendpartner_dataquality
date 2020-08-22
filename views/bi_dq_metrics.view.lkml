@@ -1,5 +1,5 @@
 view: bi_dq_metrics {
-  sql_table_name: "TALEND_DQ"."BI_DQ_METRICS"
+  sql_table_name: "@{schema_name}"."BI_DQ_METRICS"
     ;;
 
   dimension: data_concept {

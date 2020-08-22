@@ -1,5 +1,5 @@
 view: bi_comparison_analysis {
-  sql_table_name: "TALEND_DQ"."BI_COMPARISON_ANALYSIS"
+  sql_table_name: "@{schema_name}"."BI_COMPARISON_ANALYSIS"
     ;;
 
   dimension: analysis_name {

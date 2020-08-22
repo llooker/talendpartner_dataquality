@@ -1,7 +1,11 @@
-connection: "sujan_snowflake_talend_dq"
+connection: "@{connection_name}"
 
 # include all the views
 include: "/views/**/*.view"
+
+# include LookML Dashboards
+include: "/dashboards/**/*.dashboard"
+
 
 datagroup: data_quality_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
