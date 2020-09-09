@@ -1,5 +1,5 @@
 view: bi_column_analysis {
-  sql_table_name: "TALEND_DQ"."BI_COLUMN_ANALYSIS"
+  sql_table_name: "@{DQ_SCHEMA_NAME}"."BI_COLUMN_ANALYSIS"
     ;;
 
   dimension: an_pk {
