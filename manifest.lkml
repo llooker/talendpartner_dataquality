@@ -1,7 +1,7 @@
 project_name: "data_quality"
 
 constant: CONNECTION_NAME {
-  value: "sujan_snowflake_talend_dq"
+  value: "denise_snowflake_talend_dq"
 }
 
 constant: DQ_SCHEMA_NAME {
