@@ -1,6 +1,6 @@
 view: max_run_date {
   derived_table: {
-    sql: SELECT max(run_time) FROM "TALEND_DQ"."DQ_METRICS" LIMIT 10
+    sql: SELECT max(run_time) FROM "TDQ003"."DQ_METRICS" LIMIT 10
       ;;
   }
 

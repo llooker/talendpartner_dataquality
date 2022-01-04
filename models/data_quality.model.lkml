@@ -1,4 +1,4 @@
-connection: "sujan_snowflake_talend_dq"
+connection: "tdq003"
 
 # include all the views
 include: "/views/**/*.view"
@@ -26,7 +26,7 @@ explore: bi_overview_analysis {
 }
 
 
-explore: dq_metrics {
+explore: bi_dq_metrics {
   label: "Data Quality Metrics"
   join: max_run_date {
     relationship: one_to_one

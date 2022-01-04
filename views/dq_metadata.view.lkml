@@ -1,5 +1,5 @@
 view: dq_metadata {
-  sql_table_name: "TALEND_DQ"."DQ_METADATA"
+  sql_table_name: "TDQ003"."DQ_METADATA"
     ;;
 
   dimension: dq_dimension {
